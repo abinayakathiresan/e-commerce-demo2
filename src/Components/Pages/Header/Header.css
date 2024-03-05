@@ -1,0 +1,38 @@
+.container
+{
+    
+    color:#7E7E7E;
+    font-size: 13px;
+    font-family:  sans-serif;
+}
+
+
+.header-top
+{
+    display: flex;
+}
+.header-top_left
+{
+    display: flex;
+    flex-grow: 1;
+}
+.header-top_right
+{
+    display: flex;
+}
+.padding-5
+{
+    padding: 4px;
+}
+.border-right
+{
+    border-right:#7E7E7E solid 1px;
+}
+.border-bottom
+{
+    border-bottom:1px solid #7E7E7E  ;
+}
+.margin-bottom
+{
+    margin-bottom: 5px;
+}
