@@ -23,9 +23,16 @@ const Header = function()
         </div>
         <div class = "logo-section">
             <div>
-
-                <img src = {logoimg}/>
+                <img class = "logo-section__image" src = {logoimg}/>
             </div>
+            <div class = "logo-section_search">
+                category
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <div class = "border-bottom">
         </div>
         </>
     )

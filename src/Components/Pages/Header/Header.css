@@ -36,3 +36,20 @@
 {
     margin-bottom: 5px;
 }
+.logo-section{
+    display: flex;
+}
+.logo-section__image
+{
+height: 50px;
+margin: 20px;
+   
+}
+.logo-section_search
+{
+    border: 1px solid #7E7E7E;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 30px;
+    padding: 10px;
+}
