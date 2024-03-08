@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/Header";
+import RoutesConfig from "../../Routes/RoutesConfig";
 
 
 const Layout = function() {
@@ -9,7 +10,7 @@ const Layout = function() {
         <div>
             <Header></Header>
         </div>
-        
+        <div><RoutesConfig></RoutesConfig></div>
         </div>
         </>
     )
