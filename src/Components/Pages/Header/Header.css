@@ -1,4 +1,10 @@
-.container
+.body
+{
+    color:#7E7E7E;
+    font-size: 13px;
+    font-family:  sans-serif;
+}
+.header-top__container
 {
     
     color:#7E7E7E;
@@ -36,10 +42,12 @@
 {
     margin-bottom: 5px;
 }
-.logo-section{
+.logo-section__container{
     display: flex;
-    
     align-items: center;
+    color:#7E7E7E;
+    font-size: 13px;
+    font-family:  sans-serif;
 }
 .logo-section__image
 {
@@ -53,7 +61,7 @@ margin: 20px 20px 20px 0px;
     border-radius: 10px;
     display: flex;
     flex-grow: 1;
-    margin-right: 200px;
+    margin-right: 80px;
 
 }
 .logo-section__search
@@ -91,4 +99,44 @@ margin: 20px 20px 20px 0px;
 .margin-left__20
 {
     margin-left: 20px;
+}
+.header-menu__container
+{
+    display: flex;
+    align-items: center;
+   position: sticky;
+   top:0px;
+   background-color: white;
+}
+.header-menu__wrapper
+{
+    font-size:16px;
+    font-weight: 700;;
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    margin-right: 200px;
+   
+}
+.header-menu__customercare
+{
+    display:flex;
+    align-items: center;
+}
+
+.header-menu__customercareimg
+{
+    width: 50px;
+    height:40px;
+    margin: 6px 10px 0px 0px;
+}
+.header-menu__item{
+    margin: 10px 30px 10px 0px;
+    
+}
+.header-menu__customercareitem
+{
+    color:#7E7E7E;
+    font-size: 13px;
+    font-family:  sans-serif;
 }
