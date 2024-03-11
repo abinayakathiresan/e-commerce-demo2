@@ -3,6 +3,7 @@ import {Routes, Route } from "react-router-dom";
 import Products from "../Pages/Products/Products";
 import Users from "../Pages/Users/Users";
 import ManageUser from "../Pages/ManageUser/ManageUser";
+import Post from "../Pages/Post/Post";
 
 
 const RoutesConfig = function () {
@@ -16,6 +17,7 @@ const RoutesConfig = function () {
 
           <Route path="/view-product" element={<Products/>} exact={true} /> 
           <Route path="/users" element={<Users/>} exact={true} /> 
+          <Route path="/post" element={<Post/>} exact={true} /> 
         </Routes>
         
     );

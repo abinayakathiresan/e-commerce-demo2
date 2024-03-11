@@ -71,12 +71,11 @@ const Header = function()
                   <div class = "header-menu__item"><Link to="/users" exact>
                     Users Details
                   </Link></div>
-                <div class = "header-menu__item">Products</div>
-                <div class = "header-menu__item">View Product</div>
-                <div class = "header-menu__item">Mega menu</div>
-                <div class = "header-menu__item">Blog</div>
-                <div class = "header-menu__item">Pages</div>
-                <div class = "header-menu__item">Contact</div>
+                  <div class = "header-menu__item"><Link to="/post" exact>
+                    Manage Post
+                  </Link></div>
+                
+                
             </div>
             <div class = "header-menu__customercare">
             <div>
