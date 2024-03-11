@@ -1,11 +1,22 @@
 import {   createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const initialState = {posts: "", isPostLoading:false};
+const initialState = {posts: [], isPostLoading:false};
 
 const postSlice = createSlice({
-    name: post,
+    name: "post",
     initialState,
-    reducer:{
-        addPost:(state,action)=>{state.posts.push(action.payload);}
+    reducers:{
+        addPost: (state,action) => {
+            state.posts.push(action.payload);
+        },
+        editPost: (state, action) => {
+            state.posts = state.posts.map(item=>{
+                return item.id == action.payload.id? action.payload : item;
+              })
+        }
     }
 })
+
+export const { addPost ,editPost} = postSlice.actions;
+
+export default postSlice.reducer;
