@@ -11,7 +11,7 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     addUser: (state, action) => {
-      state.users = JSON.parse(JSON.stringify(state.users));
+   //   state.users = JSON.parse(JSON.stringify(state.users));
       state.users.push(action.payload);
    
   },
@@ -19,7 +19,7 @@ const userSlice = createSlice({
     state.users = state.users.map(item=>{
       return item.id == action.payload.id? action.payload : item;
     })
-    state.users.push(action.payload);
+    
 },
 },
   extraReducers: (builder) => {

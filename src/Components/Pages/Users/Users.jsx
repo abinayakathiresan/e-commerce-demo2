@@ -23,7 +23,7 @@ function Users(){
 
   const renderUsers = () => {
     return users && users?.map(item=>{
-        return <div className="row">
+        return <div className="row" key = {item.id}>
             <div className="col-1">
                 {item.id}
             </div>
