@@ -77,6 +77,12 @@ const Header = function()
                   <div class = "header-menu__item"><Link to="/post-list" exact>
                     Post List
                   </Link></div>
+                  <div class = "header-menu__item"><Link to="/comment" exact>
+                    Manage Comments
+                  </Link></div>
+                  <div class = "header-menu__item"><Link to="/comment-list" exact>
+                    Comments List
+                  </Link></div>
                 
                 
             </div>
