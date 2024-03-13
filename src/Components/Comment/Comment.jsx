@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+
 
 const Comment = () => {
+    const[name, setName] = useState("");
+    const[email, setEmail] = useState("");
     return(
         <div>
         <div>
-            <input type = "text" />
+            Name:<input type = "text" value ={name}/>
         </div>
         <div>
-            <input type = "text" />
+            Email:<input type = "text" value= {email}/>
         </div>
+        <div><button onClick =  {handleSubmit}>Add Comment</button></div>
         </div>
     )
 }

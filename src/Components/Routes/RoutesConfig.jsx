@@ -5,6 +5,7 @@ import Users from "../Pages/Users/Users";
 import ManageUser from "../Pages/ManageUser/ManageUser";
 import Post from "../Pages/Post/Post";
 import PostList from "../Pages/PostList/PostList";
+import ViewComment from "../ViewComment/ViewComment";
 import Comment from "../Comment/Comment";
 
 
@@ -22,7 +23,8 @@ const RoutesConfig = function () {
           <Route path="/post" element={<Post/>} exact={true} /> 
           <Route path="/post-list" element={<PostList/>} exact={true} /> 
           <Route path="/post/:action/:postId" element={<Post/>} exact={true} /> 
-          <Route path="/comment" element={<Comment/>} exact={true} /> 
+          <Route path="/comment-list" element={<ViewComment/>} exact={true} /> 
+          <Route path="/comment/:action/:commentId" element={<Comment/>} exact={true} /> 
         </Routes>
         
     );
