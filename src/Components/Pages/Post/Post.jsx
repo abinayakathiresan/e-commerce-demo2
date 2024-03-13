@@ -9,28 +9,25 @@ const Post = ()=>
 {
     const [name, setName] = useState("");
     const [des, setDes] = useState("");
-    const [id, setId] = useState("");
     
     const dispatch = useDispatch();
     const navigate = useNavigate();
     let {action, postId} = useParams(); 
     const {posts, isPostLoading} = useSelector((state) => state.post);
 
-    let postObj = "";
-    
+    let postObj = posts && posts?.find(item => {
+        return postId == item.id;
+    });
     useEffect(()=>{
-        postObj =   posts && posts?.find(item => {
-            return postId == item.id;
-          });
+        
           setName(postObj?.name);
           setDes(postObj?.des);
-          setId(postObj?.id);
-      },[posts]);
+      },[postObj]);
 
     function handleSubmit()
     {
         if(action == "edit"){
-            const editPostObj = {...postObj, name:name, des:des, id: id};
+            const editPostObj = {...postObj, name:name, des:des};
             dispatch(editPost(editPostObj));
         }
         else{

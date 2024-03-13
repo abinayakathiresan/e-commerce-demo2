@@ -1,7 +1,8 @@
 import {   createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { mergecst } from "../../utils";
 
 const initialState = {
-    users:"",
+    users:[],
   isUserDetailsLoading: false,
   error: "",
 };
@@ -32,7 +33,8 @@ const userSlice = createSlice({
         getUserAsync.fulfilled,
       (state, action) => {
         state.isUserDetailsLoading=false;
-        state.users = action.payload;
+        state.users = mergecst(state.users, action.payload, 'id');
+        
       }
     );
   },

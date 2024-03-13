@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
 import "./ViewComment.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getCommentAsync } from "../../State/Slice/commentSlice";
+import { useNavigate } from "react-router-dom";
 
 const ViewComment = () =>
 {
-    const[comments, setComments] = useState("");
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    
+    const {comments, isCommentLoading} = useSelector((state) =>  state.comment);
     useEffect(()=>{
-       axios.get('https://jsonplaceholder.typicode.com/comments').then((response)=>{
-        const comments = response.data;
-        console.log(response);
-        setComments(comments);
-       })
-    }, []);
-
-    function editComment()
+        dispatch(getCommentAsync());
+       },[]);
+  
+    function editComment(item)
     {
-
+        navigate('/comment/edit/' + item.id);
     }
 
     return(

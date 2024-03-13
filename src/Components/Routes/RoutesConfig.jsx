@@ -23,8 +23,13 @@ const RoutesConfig = function () {
           <Route path="/post" element={<Post/>} exact={true} /> 
           <Route path="/post-list" element={<PostList/>} exact={true} /> 
           <Route path="/post/:action/:postId" element={<Post/>} exact={true} /> 
+          <Route path="/post/:action" element={<Post/>} exact={true} /> 
+
           <Route path="/comment-list" element={<ViewComment/>} exact={true} /> 
           <Route path="/comment/:action/:commentId" element={<Comment/>} exact={true} /> 
+          <Route path="/comment/:action" element={<Comment/>} exact={true} /> 
+
+          <Route path="*" element={<div>Page not found</div>} />
         </Routes>
         
     );

@@ -32,8 +32,8 @@ function ManageUser(){
       const userName = document.getElementById("userName").value;
       if(action == "add")
       {
-        const userId = Math.random();
-        const newUserObj = {userId, name:userName};
+        const userId =Math.floor((Math.random() * 999) + 1);
+        const newUserObj = {id:userId, name:userName};
         dispatch(addUser(newUserObj));
       }
       else{
