@@ -4,6 +4,8 @@ import { mergecst } from "../../utils";
 const initialState = {
     users:[],
   isUserDetailsLoading: false,
+  isLoggedIn: false,
+  currentUser: null,
   error: "",
 };
 
@@ -22,6 +24,14 @@ const userSlice = createSlice({
     })
     
 },
+handleLogin: (state, action) => {
+  state.isLoggedIn = true;
+  state.currentUser = action.payload;
+ },
+ handleLogoutAction: (state) => {
+  state.isLoggedIn = false;
+  state.currentUser = null;
+ },
 },
   extraReducers: (builder) => {
     builder
@@ -33,6 +43,9 @@ const userSlice = createSlice({
         getUserAsync.fulfilled,
       (state, action) => {
         state.isUserDetailsLoading=false;
+        action.payload = action.payload.map(item => {
+          return {...item, password:"test123"}; 
+        })
         state.users = mergecst(state.users, action.payload, 'id');
         
       }
@@ -49,6 +62,6 @@ export const getUserAsync = createAsyncThunk(
     return users.json();
   }
 );
-export const { addUser, editUser } = userSlice.actions;
+export const { addUser, editUser, handleLogin, handleLogoutAction } = userSlice.actions;
 
 export default userSlice.reducer;

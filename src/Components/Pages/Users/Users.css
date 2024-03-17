@@ -1,14 +1,15 @@
 .row
 {
     display: flex;
+    align-items: center;
 }
 .col-1
 {
-    margin: 10px;
+    flex-basis: 100px;
 }
 .col-2{
-    margin:30px;
+    flex-basis: 200px;
 }
 .col-3{
-    margin:10px;
+    flex-basis: 300px;
 }

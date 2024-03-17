@@ -34,6 +34,9 @@ function Users(){
                 {item.email}
             </div>
             <div className="col-3">
+                {item.password}
+            </div>
+            <div className="col-3">
             <button onClick={() => editHandler(item)}>Edit</button>
             </div>
         </div>
@@ -42,7 +45,25 @@ function Users(){
   return (
     <div>
        <NavLink to = "/user/add">Add User</NavLink>
-      {isUserDetailsLoading ?<div>Loading...</div>:<div className="todos__list">{renderUsers()}</div>}
+      {isUserDetailsLoading ?<div>Loading...</div>:<div className="todos__list">
+      <div className="row">
+            <div className="col-1">
+                id
+            </div>
+            <div className="col-2">
+                Name
+            </div>
+            <div className="col-3">
+               Email
+            </div>
+            <div className="col-3">
+                Password
+            </div>
+            <div className="col-3">
+            Action
+            </div>
+        </div>
+        {renderUsers()}</div>}
        
     </div>
   );

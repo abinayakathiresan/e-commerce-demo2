@@ -6,9 +6,18 @@ import wishlistimg from "./../.././../assets/wishlist.svg";
 import cartimg from "./../.././../assets/cart.svg";
 import accountimg from "./../.././../assets/account.svg";
 import customercareimg from "./../.././../assets/customercare.png";
+import { useDispatch, useSelector } from "react-redux";
+import {handleLogoutAction } from "../../../State/Slice/userSlice";
+
 
 const Header = function()
 {
+    const {currentUser} = useSelector((state) => state.user);
+    const dispatch = useDispatch();
+  
+    const handleLogout = ()=> {
+        dispatch(handleLogoutAction());
+    }
     return(
         <>
        
@@ -60,31 +69,35 @@ const Header = function()
         <div class = "border-bottom">
         </div>
         <div class = "header-menu__container">
-            <div class = "header-menu__wrapper ">
-                <div class = "header-menu__item">Browse All Categories</div>
-                <div class = "header-menu__item"><Link to="/products" exact>
-                    Products
-                  </Link></div>
-                  <div class = "header-menu__item"><Link to="/view-product" exact>
-                    View Product
-                  </Link></div>
-                  <div class = "header-menu__item"><Link to="/users" exact>
-                    Users Details
-                  </Link></div>
-                  <div class = "header-menu__item"><Link to="/post" exact>
-                    Manage Post
-                  </Link></div>
-                  <div class = "header-menu__item"><Link to="/post-list" exact>
-                    Post List
-                  </Link></div>
-                  <div class = "header-menu__item"><Link to="/comment/add" exact>
-                    Manage Comments
-                  </Link></div>
-                  <div class = "header-menu__item"><Link to="/comment-list" exact>
-                    Comments List
-                  </Link></div>
+            <div class = "header-menu__wrapper ">                
+                <div class = "header-menu__item">
+                    <Link to="/" exact> Home </Link>
+                </div>
+                <div class = "header-menu__item">
+                    <Link to="/product/add" exact> Add Product </Link>
+                </div>
+                {!currentUser?.email && <><div class = "header-menu__item">
+                    <Link to="/register" exact> Register</Link>
+                </div>
+                <div class = "header-menu__item">
+                    <Link to="/login" exact> Login </Link>
+                </div></>}
+                
+                {currentUser?.email && <><div class = "header-menu__item">
+                    <Link to="/profile" exact> Profile </Link>
+                </div>
+                <div class = "header-menu__item">
+                    <Link  onClick={handleLogout} exact> LogOut </Link>
+                </div></>}
+                <div class = "header-menu__item">
+                    <Link to="/users" exact> Users </Link>
+                </div>
+               
                 
                 
+            </div>
+            <div>
+                Welcome {currentUser?.name}
             </div>
             <div class = "header-menu__customercare">
             <div>
