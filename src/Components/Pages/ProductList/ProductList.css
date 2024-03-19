@@ -1,0 +1,22 @@
+.product-list__card{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 12px 24px;
+}
+.product-list__image img {
+    width: 100%;
+}
+.product-list__price {
+    color: #3BB77E;
+    font-weight: bold;
+
+}
+.product-list__name{
+    color: #253D4E;
+    font-weight: bold;
+    
+}
+.product-list .product-list__btn{
+    background-color: #3BB77E;
+}

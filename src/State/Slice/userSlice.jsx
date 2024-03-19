@@ -1,8 +1,9 @@
 import {   createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { mergecst } from "../../utils";
+import { CONSTANTS } from "../../utils/constants";
 
 const initialState = {
-    users:[],
+    users: CONSTANTS.DATA.DEFAULT_USERS,
   isUserDetailsLoading: false,
   isLoggedIn: false,
   currentUser: null,
@@ -20,6 +21,7 @@ const userSlice = createSlice({
   },
   editUser: (state, action) => {
     state.users = state.users.map(item=>{
+      console.log(item.id +"=="+ action.payload.id);
       return item.id == action.payload.id? action.payload : item;
     })
     

@@ -79,6 +79,7 @@ margin: 20px 20px 20px 0px;
 {
     display: flex;
     margin: 25px 0px 25px 25px;
+    gap: 12px;
    
 }
 .user-section__image
@@ -89,13 +90,12 @@ margin: 20px 20px 20px 0px;
 .user-section__wrapper
 {
     display: flex;
+    align-items: center;
+    gap: 4px;
     
     
 }
-.user-section__icondetail
-{
-    margin-top: 20px;
-}
+ 
 .margin-left__20
 {
     margin-left: 20px;
@@ -116,6 +116,8 @@ margin: 20px 20px 20px 0px;
     font-family: "Quicksand", sans-serif;
     display: flex;
     margin-right: 200px;
+    flex-grow: 1;
+    padding-left: 10px;
    
 }
 .header-menu__customercare
@@ -133,6 +135,13 @@ margin: 20px 20px 20px 0px;
 .header-menu__item{
     margin: 10px 30px 10px 0px;
     
+}
+.header-menu__item a {
+    color: #253D4E;
+    text-decoration: none;;
+}
+.header-menu__item a:hover, .header-menu__item .header-menu__item-active{
+    color:#3BB77E;
 }
 .header-menu__customercareitem
 {

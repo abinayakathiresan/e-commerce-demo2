@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "../Header/Header";
 import RoutesConfig from "../../Routes/RoutesConfig";
+import Footer from "../Footer/Footer";
 
 
 const Layout = function() {
     return(
         <>
-        <div class = "container">
-        <div>
+        <div className = "container">
             <Header></Header>
-        </div>
-        <div><RoutesConfig></RoutesConfig></div>
+            <RoutesConfig></RoutesConfig> 
+            <Footer/>
         </div>
         </>
     )

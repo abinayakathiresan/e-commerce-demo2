@@ -9,11 +9,11 @@ const commentSlice = createSlice({
     reducers:{
         addComment: (state,action) => {
             state.comments.push(action.payload);
-            console.log(state.comments);
+            
         },
         editComment: (state, action) => {
             state.comments = state.comments.map(item=>{
-                console.log(item.id , action.payload.id);
+                
                 return item.id == action.payload.id? action.payload : item;
               })
         }

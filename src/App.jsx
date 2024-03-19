@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Layout from './Components/Pages/Layout/Layout'
+import Layout from './Components/templates/Layout/Layout'
 import { BrowserRouter } from 'react-router-dom'
 
 function App() {
