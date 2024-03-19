@@ -18,7 +18,7 @@ function ProductList(){
     return products && <Grid container spacing={2} className="product-list__container">{products?.map(item=>{
         return <Grid item  key = {item.id} md={3} className="product-list__row">
           <Card className="product-list__card"  >
-            <div className="product-list__image"><img src={productImg} /></div>
+            <div className="product-list__image"><img src={"https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg"} /></div>
             <div className="product-list__name"> {item.name}</div>
             <div className="product-list__price">${item.price}</div>
             <div className="product-list__action">

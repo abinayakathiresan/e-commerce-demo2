@@ -51,7 +51,9 @@ function Products(){
     <div>
        <Box component="section" sx={{display:"flex", justifyContent:"space-between", p: 4,}}>
             <Typography variant="h4" component={"h4"}>Products</Typography>
-           <NavLink to = "/product/add"><Button variant="contained">Add Product</Button></NavLink> 
+           <NavLink to = "/product/add">
+            <Button variant="contained">Add Product</Button>
+            </NavLink> 
         </Box>
 
        {isProductLoading ?<div>Loading...</div>:<div>{renderTable()}</div>}
