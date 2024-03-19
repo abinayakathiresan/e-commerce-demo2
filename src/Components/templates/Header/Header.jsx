@@ -8,6 +8,7 @@ import {handleLogoutAction } from "../../../State/Slice/userSlice";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 const Header = function()
 {
     const {currentUser} = useSelector((state) => state.user);
@@ -101,7 +102,8 @@ const Header = function()
             </div>
             <div className = "header-menu__customercare">
             <div>
-                <img className = "header-menu__customercareimg" src = {customercareimg}/>
+                <LocalPhoneIcon/>
+             
             </div>
             <div className = "header-menu__customercareitem">
             <div>1900-888</div>
