@@ -32,7 +32,7 @@ function ProductList(){
    
   return (
     <section className="product-list">
-       <Box component="section" sx={{display:"flex", justifyContent:"space-between", p: 4,}}>
+       <Box component="section" sx={{display:"flex", justifyContent:"space-between", p: 4, color : "primary.main"}}>
             <Typography variant="h4" component={"h4"}>Products</Typography>
            {/*<NavLink to = "/product/add"><Button variant="contained">Add Product</Button></NavLink> */}
         </Box>
