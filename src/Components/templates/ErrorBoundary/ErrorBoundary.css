@@ -1,0 +1,8 @@
+.footer{
+    margin: 24px 0;
+    
+}
+.footer__line{
+    border-top: 0.5px solid #9bf2ca;
+    padding-bottom: 24px;;
+}

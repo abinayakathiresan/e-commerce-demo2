@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Products from "../Pages/Products/Products";
 import ProductList from "../Pages/ProductList/ProductList";
 import ManageProduct from "../Pages/ManageProduct/ManageProduct";
+import Profile from "../Pages/Profile/Profile";
 
 
 
@@ -18,6 +19,7 @@ const RoutesConfig = function () {
           <Route path="/user/:action/:userId" element={<ManageUser/>} exact={true} /> 
           <Route path="/user/:action" element={<ManageUser/>} exact={true} /> 
           <Route path="/register" element={<ManageUser/>} exact={true} /> 
+          <Route path="/profile" element={<Profile/>} exact={true} /> 
           <Route path="/users" element={<Users/>} exact={true} /> 
           <Route path="/products" element={<Products/>} exact={true} /> 
           <Route path="/product/:action/:userId" element={<ManageProduct/>} exact={true} /> 
