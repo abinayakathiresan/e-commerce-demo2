@@ -22,7 +22,7 @@ const RoutesConfig = function () {
           <Route path="/profile" element={<Profile/>} exact={true} /> 
           <Route path="/users" element={<Users/>} exact={true} /> 
           <Route path="/products" element={<Products/>} exact={true} /> 
-          <Route path="/product/:action/:userId" element={<ManageProduct/>} exact={true} /> 
+          <Route path="/product/:action/:productId" element={<ManageProduct/>} exact={true} /> 
           <Route path="/product/:action" element={<ManageProduct/>} exact={true} /> 
           <Route path="*" element={<div>Page not found</div>} />
         </Routes>

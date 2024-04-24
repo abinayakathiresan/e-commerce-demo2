@@ -27,12 +27,12 @@ function ManageUser(){
       pageTitle= "Edit User";
     }
 
-    
+    userObj =   users && users?.find(item => {
+      return userId == item.id;
+    });
 
     useEffect(()=>{    
-        userObj =   users && users?.find(item => {
-          return userId == item.id;
-        });   
+          
         setName(userObj?.name);
         setEmail(userObj?.email);
         setPassword(userObj?.password);

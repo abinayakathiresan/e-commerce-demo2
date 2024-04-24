@@ -16,7 +16,7 @@ function ProductList(){
 
   const renderProducts = () => {
     return products && <Grid container spacing={2} className="product-list__container">{products?.map(item=>{
-        return <Grid item  key = {item.id} md={3} className="product-list__row">
+        return <Grid item  key = {item.id} md={3}  sm={6} className="product-list__row">
           <Card className="product-list__card"  >
             <div className="product-list__image"><img src={"https://nest-frontend-v6.netlify.app/assets/imgs/shop/product-1-1.jpg"} /></div>
             <div className="product-list__name"> {item.name}</div>
@@ -32,7 +32,7 @@ function ProductList(){
    
   return (
     <section className="product-list">
-       <Box component="section" sx={{display:"flex", justifyContent:"space-between", p: 4, color : "primary.main"}}>
+       <Box sx={{display:"flex", justifyContent:"space-between", p: 4, color : "primary.main"}}>
             <Typography variant="h4" component={"h4"}>Products</Typography>
            {/*<NavLink to = "/product/add"><Button variant="contained">Add Product</Button></NavLink> */}
         </Box>

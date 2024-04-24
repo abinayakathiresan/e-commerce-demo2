@@ -21,7 +21,6 @@ const userSlice = createSlice({
   },
   editUser: (state, action) => {
     state.users = state.users.map(item=>{
-      console.log(item.id +"=="+ action.payload.id);
       return item.id == action.payload.id? action.payload : item;
     })
     

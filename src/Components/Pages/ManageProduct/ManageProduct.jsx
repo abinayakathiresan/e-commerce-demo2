@@ -13,7 +13,6 @@ function ManageProduct(){
     const {products, isProductsLoading} = useSelector((state) => state.product);
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
-    const [password, setPassword] = useState("");
     let {action, productId} = useParams(); 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -34,7 +33,7 @@ function ManageProduct(){
     useEffect(()=>{       
         setName(productObj?.name);
         setPrice(productObj?.price);
-    },[products]);
+    },[productObj]);
 
 
     const handleSubmit = () =>
