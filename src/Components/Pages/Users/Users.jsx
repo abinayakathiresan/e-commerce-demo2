@@ -12,6 +12,19 @@ function Users(){
     const navigate = useNavigate();
 
     const dispatch = useDispatch();
+    useEffect(()=>{
+   
+      const test = setInterval(()=>{
+        console.log("mounting user");
+      },6000);
+
+      return () =>{
+        console.log("umount user");
+        clearInterval(test);
+      }
+
+  },[]);
+
 
     {/*useEffect(()=>{
         dispatch(getUserAsync());
